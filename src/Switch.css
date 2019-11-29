@@ -1,0 +1,129 @@
+:root {
+  --primary-color: rgb(64, 64, 64);
+  --bg-color: rgb(255, 255, 255);
+  --input-color: rgb(64,64,64);
+  --input-bg-color: rgb(236, 236, 236);
+  --input-placeholder-color: rgb(128,128,128);
+  --switch-bg-color: rgb(224, 224, 224);
+  --border-container-color: rgb(0,0,0);
+}
+
+
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+}
+
+ul, li {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+.container {
+  width: 350px;
+  margin: auto;
+  border: 1px solid var(--border-container-color);
+  height: 99vh;
+  color: var(--primary-color);
+}
+
+.container > form {
+  padding: 10px;
+  margin-top: 70px;
+  border-radius: 15px;
+}
+
+.form-control {
+  margin-top: 20px;
+}
+
+.form-control > label {
+  display: block;
+  font-size: 16px;
+  color: var(--primary-color);
+  margin-bottom: 5px;
+}
+
+.form-control > input {
+  width: calc(100% - 15px);
+  border: none;
+  border-bottom: 2px solid var(--primary-color);
+  padding-left: 15px;
+  padding-bottom: 5px;
+  outline: none;
+  color: var(--input-color);
+  background-color: var(--input-bg-color);
+}
+
+.form-control > ::placeholder {
+  color: var(--input-placeholder-color);
+}
+
+.form-control > input[type='submit'] {
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+  width: 100%;
+  padding: 15px 0;
+  transition: all .3s;
+  color: var(--primary-color);
+}
+
+.form-control > input[type='submit']:hover {
+  transition: all .3s;
+  background-color: rgb(141, 141, 141);
+}
+
+
+.control {
+  border-bottom: 1px solid rgb(187, 187, 187);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.switch {
+  position: relative;
+  height: 30px;
+  width: 55px;
+  background-color: var(--switch-bg-color);
+  border-radius: 100px;
+  transition: background .3s;
+  box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.336);
+  cursor: pointer;
+}
+
+.switch > .circle {
+  position: absolute;
+  height: 28px;
+  width: 28px;
+  background-color: #ffffff;
+  box-shadow: 2px 0px 3px rgba(0, 0, 0, 0.336);
+  top: 1px;
+  left: 1px;
+  border-radius: 100%;
+  transition: all .3s;
+}
+
+.switch-active {
+  background-color:rgb(32, 32, 255);
+}
+
+.switch-active > .circle {
+  left: 26px;
+  box-shadow: -2px 0px 3px rgba(0, 0, 0, 0.336);
+}
+
+.hide {
+  display: none;
+}
+
